@@ -44,7 +44,7 @@ Test the same workflow in an Alexa+ client, add more recipes and units, and try 
 
 ## Entry details (not part of the public story)
 
-- Source: https://github.com/waytzhang/pantry-relay (currently private).
+- Source: https://github.com/waytzhang/pantry-relay (public, MIT licensed).
 - Built with: JavaScript, Node.js, SQLite, Express, MCP, Zod, Bootstrap, HTML, CSS.
 - Intended primary track: Alexa+.
 - No AWS or optional Open Source prize claim is included.
