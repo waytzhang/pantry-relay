@@ -7,5 +7,9 @@
   "voice_used": false,
   "sha256": "6a704f64f144820c2203702f64cc4991bc8dfe17b75a4e8e05ff9e0eb3ce5c2a",
   "bytes": 856361,
-  "provenance": "Captioned montage from unchanged browser captures of the running local app and recorded MCP calls; not a live Alexa+ session."
+  "provenance": "Captioned montage from unchanged browser captures of the running local app and recorded MCP calls; not a live Alexa+ session.",
+  "public_video_url": "https://www.youtube.com/watch?v=DOhFGAurOiY",
+  "public_watch_page_loaded": true,
+  "platform_duration": "2:23",
+  "youtube_copyright_check": "completed, no issues found"
 }

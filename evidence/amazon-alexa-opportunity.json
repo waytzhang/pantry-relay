@@ -4,7 +4,11 @@
   "resources": "https://amazonappdev2026.devpost.com/resources",
   "event": "Build, Ship, Shape: Amazon Developer Hackathon",
   "primary_track": "Alexa+",
-  "cash_prizes_usd": [25000, 15000, 4000],
+  "cash_prizes_usd": [
+    25000,
+    15000,
+    4000
+  ],
   "credits_are_not_cash": true,
   "submission_deadline_utc": "2026-10-23T19:00:00Z",
   "expected_results": "2026-12-03",
@@ -12,14 +16,22 @@
   "project_runtime_cost_usd": 0,
   "cloud_or_wallet_required_by_this_project": false,
   "technology_path": "Self-hosted MCP 2025-11-25 over Streamable HTTP",
-  "required_materials": ["functional source repository", "public demo video under 3 minutes", "project description", "developer feedback", "human entrant"],
+  "required_materials": [
+    "functional source repository",
+    "public demo video under 3 minutes",
+    "project description",
+    "developer feedback",
+    "human entrant"
+  ],
   "residence_and_adult_eligibility": "pending actual user confirmation",
   "rules_acceptance": "not performed",
   "submission_status": "not submitted",
-  "public_repository": "not published",
-  "public_video": "not uploaded",
+  "public_repository": "https://github.com/waytzhang/pantry-relay",
+  "public_video": "https://www.youtube.com/watch?v=DOhFGAurOiY",
   "identity_verification_if_winner": true,
   "payment": "cash paid to verified winner; not a crypto payout promise",
   "chance_of_winning": "unknown",
-  "income_received_usd": 0
+  "income_received_usd": 0,
+  "portfolio_project": "https://devpost.com/software/pantry-relay-e4pyuh",
+  "portfolio_video_embedded": true
 }

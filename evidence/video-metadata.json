@@ -6,7 +6,7 @@
   "voice": null,
   "audio_tracks": 0,
   "system_voice_used": false,
-  "public_upload": false,
+  "public_upload": true,
   "source_captures": [
     "01-pantry.png",
     "02-options.png",
@@ -91,5 +91,7 @@
         "Deterministic browser demo; live Alexa+ device access has not been tested."
       ]
     }
-  ]
+  ],
+  "public_video_url": "https://www.youtube.com/watch?v=DOhFGAurOiY",
+  "published_on": "2026-09-29"
 }

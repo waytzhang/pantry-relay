@@ -54,7 +54,7 @@ One household, one local computer; no user accounts or external transactions. Or
 
 - [Submission draft](docs/SUBMISSION.md)
 - [Demo recording script](docs/DEMO.md)
-- [Narrated review video](evidence/pantry-relay-review.mp4), about 2 minutes 23 seconds, made from actual browser captures. This is a screen-capture montage for review, not a claimed live Alexa session or an uploaded contest entry.
+- [Public review video](https://www.youtube.com/watch?v=DOhFGAurOiY), 2 minutes 23 seconds, captioned with no audio. It uses actual browser captures and recorded MCP calls. A live Alexa session has not been tested. [Local MP4](evidence/pantry-relay-review.mp4).
 - [Developer feedback](docs/FEEDBACK.md)
 - [Opportunity check](evidence/amazon-alexa-opportunity.json)
 
