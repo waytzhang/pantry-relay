@@ -50,4 +50,4 @@ Test the same workflow in an Alexa+ client, add more recipes and units, and try 
 - No AWS or optional Open Source prize claim is included.
 - Product feedback: see FEEDBACK.md.
 - Video: evidence/pantry-relay-review.mp4; a public YouTube or Vimeo URL is still needed.
-- Devpost is logged in as dingbuzhang. Project creation is waiting at a CAPTCHA; contest registration is waiting for the entrant's eligibility and rules acceptance. No contest entry has been submitted.
+- Devpost project story and technology tags are saved at https://devpost.com/software/pantry-relay-e4pyuh. Contest registration is waiting for the entrant's eligibility and rules acceptance. No contest entry has been submitted.
