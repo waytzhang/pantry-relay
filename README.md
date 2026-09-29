@@ -56,6 +56,6 @@ One household, one local computer; no user accounts or external transactions. Or
 - [Demo recording script](docs/DEMO.md)
 - [Narrated review video](evidence/pantry-relay-review.mp4), about 2 minutes 23 seconds, made from actual browser captures. This is a screen-capture montage for review, not a claimed live Alexa session or an uploaded contest entry.
 - [Developer feedback](docs/FEEDBACK.md)
-- [Opportunity check](../evidence/amazon-alexa-opportunity.json)
+- [Opportunity check](evidence/amazon-alexa-opportunity.json)
 
 Source code is offered under MIT; Bootstrap retains its own MIT notice in `public/bootstrap-LICENSE.txt`. Dependency licenses stay with their npm packages. No credentials, household database, or `node_modules` are included in the release archive.
