@@ -22,7 +22,7 @@ If someone changes the stock after a recommendation, the old proposal is blocked
 
 The app uses Node.js, SQLite, Express, Zod and the official MCP TypeScript SDK. The browser and the MCP tools share the same pantry operations. The self-hosted endpoint supports Streamable HTTP with protocol 2025-11-25, six tools, a pantry resource and a dinner-planning prompt. A bundled skill explains when an agent should ask for confirmation and how to recover from a stale proposal.
 
-The browser demo uses a deterministic command parser. The MCP path was tested with the official SDK client; a live Alexa+ device session has not been tested. Everything runs locally without a paid model endpoint or cloud account.
+The browser demo uses a deterministic command parser. The public sample kitchen runs entirely in the browser using sql.js, with fictional inventory saved in site storage. It shares the pantry operations with the local MCP application. The MCP path was tested with the official SDK client; a live Alexa+ device session has not been tested. Neither version needs a paid model endpoint or cloud account.
 
 Codex assisted with the design, code, testing and written materials. The recipes are original demo examples and the household records are fictional.
 
@@ -32,7 +32,7 @@ The difficult part was keeping three quantities straight: what is in the pantry,
 
 ## Accomplishments
 
-The complete propose-confirm-cook flow works through both the browser and MCP. Nine automated checks cover repeated cooking requests, stale proposals, shortages, cancellation, restarts and real HTTP protocol negotiation. The 2 minute 23 second review video uses captures of the running app and its recorded MCP calls.
+The complete propose-confirm-cook flow works through both the browser and MCP. Twelve automated checks cover repeated cooking requests, stale proposals, shortages, cancellation, restarts, browser storage failures, competing tabs and real HTTP protocol negotiation. The 2 minute 23 second review video uses captures of the running app and its recorded MCP calls. The public sample kitchen lets reviewers try the handoff without installing anything.
 
 ## What was learned
 
@@ -45,6 +45,7 @@ Test the same workflow in an Alexa+ client, add more recipes and units, and try 
 ## Entry details (not part of the public story)
 
 - Source: https://github.com/waytzhang/pantry-relay (public, MIT licensed).
+- Try it: https://waytzhang.github.io/pantry-relay/ (fictional browser sample; local MCP server runs separately).
 - Built with: JavaScript, Node.js, SQLite, Express, MCP, Zod, Bootstrap, HTML, CSS.
 - Intended primary track: Alexa+.
 - No AWS or optional Open Source prize claim is included.

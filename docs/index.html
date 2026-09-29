@@ -1,24 +1,25 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pantry Relay · Dinner, together</title><link rel="stylesheet" href="/bootstrap.min.css"><link rel="stylesheet" href="/app.css"></head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pantry Relay · Dinner, together</title><link rel="stylesheet" href="./bootstrap.min.css"><link rel="stylesheet" href="./app.css"></head>
 <body>
-<header class="topbar"><a class="brand" href="/">Pantry Relay<span>Dinner, together.</span></a><span class="demo-label">Fictional household demo</span></header>
+<header class="topbar"><a class="brand" href="./">Pantry Relay<span>Dinner, together.</span></a><span class="demo-label">Sample kitchen · saved in this browser</span></header>
 <main class="container-fluid app-shell">
   <section class="intro"><div><h1>Good dinner.<br>Less forgotten food.</h1><p>Start with what you have. Make a plan everyone can pick up.</p></div><div class="date-note"><span>Your shared kitchen</span><strong id="today">Loading pantry…</strong><span id="stock-summary"></span></div></section>
   <div id="notice" class="notice" role="status" aria-live="polite" hidden></div>
   <div class="workspace">
     <div class="planning-column">
-      <section class="panel planner"><h2>What's for dinner?</h2><form id="plan-form"><label for="command">Tell your kitchen helper</label><textarea id="command" rows="2" required maxlength="240">Dinner for 2, vegetarian, under 25 minutes.</textarea><div class="form-foot"><span>Try “Dinner for 3 in 20 minutes”</span><button class="btn btn-primary" type="submit" id="plan-button">Find dinner</button></div></form><p class="small-note">You'll review the plan before anything is reserved.</p></section>
+      <section class="panel planner"><h2>What's for dinner?</h2><form id="plan-form"><label for="command">Tell your kitchen helper</label><textarea id="command" rows="2" required maxlength="240">Dinner for 2, vegetarian, under 25 minutes.</textarea><div class="form-foot"><span>Try “Dinner for 3 in 20 minutes”</span><button class="btn btn-primary" type="submit" id="plan-button" disabled>Find dinner</button></div></form><p class="small-note">You'll review the plan before anything is reserved.</p></section>
       <section id="recommendations" aria-live="polite"><div class="empty-state"><span class="empty-mark" aria-hidden="true">↗</span><h2>A little help at dinner time.</h2><p>We'll check your pantry and date labels, then find meals that fit your evening.</p></div></section>
       <section class="panel history"><div class="section-title"><h2>Kitchen handoff</h2><span id="plan-count"></span></div><div id="plans"><p class="quiet">No dinner plans yet. A confirmed plan will appear here.</p></div></section>
     </div>
     <aside class="pantry-column">
       <section class="panel pantry"><div class="section-title"><h2>In your pantry</h2><span id="pantry-count"></span></div><div id="lots"></div><p class="small-note">Use your own judgment about food condition. Date labels help organize your pantry.</p></section>
-      <section class="panel shopping"><div class="section-title"><h2>Shopping list</h2><a class="text-button" id="download-list" href="/api/shopping-list" download="pantry-shopping-list.txt">Export</a></div><div id="shopping"></div></section>
+      <section class="panel shopping"><div class="section-title"><h2>Shopping list</h2><a class="text-button" id="download-list" href="./api/shopping-list" download="pantry-shopping-list.txt">Export</a></div><div id="shopping"></div></section>
       <details class="panel restock"><summary>Record food you've brought home</summary><form id="stock-form"><label for="ingredient">Ingredient</label><select id="ingredient" required></select><div class="stock-fields"><div><label for="quantity">Quantity <span id="stock-unit"></span></label><input id="quantity" type="number" min="1" max="100000" step="1" required></div><div><label for="expiry">Date label</label><input id="expiry" type="date" required></div></div><button class="btn btn-outline-primary" type="submit">Add to pantry</button></form><p class="small-note">Adding a shopping need does not add stock. Cancel and replan meals after restocking.</p></details>
     </aside>
   </div>
 </main>
-<footer>Made for everyday kitchens. <a href="/about.html">About this demo</a></footer>
-<script type="module" src="/app.js"></script>
+<footer>Try it with fictional food. <button class="text-button" type="button" id="reset-demo">Reset sample pantry</button> · <a href="https://github.com/waytzhang/pantry-relay">Source</a> · <a href="./about.html">About this demo</a></footer>
+<script src="./vendor/sql-wasm.js"></script>
+<script type="module" src="./app.js"></script>
 </body></html>

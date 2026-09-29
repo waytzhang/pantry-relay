@@ -2,6 +2,12 @@
 
 A local household dinner handoff: plan from available food, reserve a chosen meal, remember it across sessions, and record cooking without double-counting inventory. Built with AI assistance as a candidate for the Amazon Developer Hackathon Alexa+ track. **Not submitted, not an awarded project, and not an Amazon-certified integration.**
 
+## Try in your browser
+
+[Open the sample kitchen](https://waytzhang.github.io/pantry-relay/). No installation, login, paid model or cloud account is needed. This static demo uses the same pantry operations with SQLite compiled to WebAssembly through sql.js. Its fictional stock and meal plans stay in this browser's site storage; they are not synchronized between computers. Supported browsers coordinate tabs with Web Locks. Otherwise, use one tab at a time.
+
+The public site demonstrates the pantry workflow. The real MCP endpoint runs separately in the local application below; the website does not provide a live Alexa session. To rebuild the static files from source, run `npm run build:web` after installing dependencies. GitHub Pages serves `docs/`.
+
 ## Run locally, with no recharge
 
 Prerequisite: Node.js 24 or newer. No paid cloud account, API key, wallet, hardware, or subscription is required for this application.
@@ -42,7 +48,7 @@ The SDK client makes actual HTTP MCP calls. The report lists tool inputs and out
 npm test
 ```
 
-Nine checks cover unchanged stock during proposals, exact-once cooking, stale proposals from overlapping users, cancellation, shortages, expiry changes, valid restocking, restart persistence, and the official MCP client over real HTTP. The integration test explicitly verifies protocol negotiation returns `2025-11-25`.
+Twelve checks cover unchanged stock during proposals, exact-once cooking, stale proposals from overlapping users, cancellation, shortages, expiry changes, valid restocking, restart persistence, and the official MCP client over real HTTP. The integration test explicitly verifies protocol negotiation returns `2025-11-25`. Browser-adapter checks use actual WebAssembly SQLite to verify persisted state, competing tabs, and failed storage writes without partial reservations.
 
 Browser evidence is in `evidence/`. The recorded flow confirms a two-person skillet, records it cooked, reloads the app, and verifies the retained inventory. See [verification record](evidence/verification.json).
 
