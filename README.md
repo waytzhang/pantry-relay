@@ -6,6 +6,8 @@ A local household dinner handoff: plan from available food, reserve a chosen mea
 
 [Open the sample kitchen](https://waytzhang.github.io/pantry-relay/). No installation, login, paid model or cloud account is needed. This static demo uses the same pantry operations with SQLite compiled to WebAssembly through sql.js. Its fictional stock and meal plans stay in this browser's site storage; they are not synchronized between computers. Supported browsers coordinate tabs with Web Locks. Otherwise, use one tab at a time.
 
+[Download the browser release and offline preview](https://github.com/waytzhang/pantry-relay/releases/tag/v0.1.0-web). The standalone offline file is a preview; direct file opening has not been browser-verified. The hosted sample above is the tested version.
+
 The public site demonstrates the pantry workflow. The real MCP endpoint runs separately in the local application below; the website does not provide a live Alexa session. To rebuild the static files from source, run `npm run build:web` after installing dependencies. GitHub Pages serves `docs/`.
 
 ## Run locally, with no recharge
