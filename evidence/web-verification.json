@@ -1,0 +1,65 @@
+{
+  "verified_at_utc": "2026-09-29T08:21:11.473265+00:00",
+  "public_url": "https://waytzhang.github.io/pantry-relay/",
+  "source_commit_at_browser_check": "bdf356ec619eed0da44cd004d77b7f49fcbc05d2",
+  "hosting": {
+    "provider": "GitHub Pages",
+    "source_branch": "main",
+    "source_directory": "/docs",
+    "build_type": "legacy",
+    "build_observed": "built",
+    "https_enforced": true
+  },
+  "application_scope": "Fictional browser-only sample; shared pantry operations; real MCP endpoint runs separately in the local application",
+  "paid_api_calls": 0,
+  "account_required_for_demo": false,
+  "tests": {
+    "total": 12,
+    "passed": 12,
+    "failed": 0,
+    "includes_actual_sqlite_wasm": true,
+    "includes_real_official_sdk_http_mcp": true
+  },
+  "local_browser_checks": [
+    "recommendation does not consume stock",
+    "confirmed ingredients remain reserved after reload",
+    "cooking consumes once and persists after reload",
+    "eight-person shortages appear with correct quantities",
+    "meal with shortages is blocked from cooking",
+    "cancellation releases only the cancelled plan and preserves cooked history",
+    "actual shopping text file downloaded"
+  ],
+  "public_browser_checks": [
+    "12 seeded pantry lots loaded",
+    "recommendation worked",
+    "confirmation and reservations persisted after reload",
+    "cooking and reduced quantities persisted after reload",
+    "about and recorded MCP evidence links load"
+  ],
+  "stock_after_public_cooking": {
+    "spinach_g": 50,
+    "courgette_g": 150,
+    "plain_yogurt_g": 120,
+    "onions_g": 200,
+    "chickpeas_g": 100
+  },
+  "mobile_local": {
+    "viewport_width": 390,
+    "document_width": 390,
+    "horizontal_overflow": false
+  },
+  "observed_console_errors": [],
+  "shopping_download": {
+    "file": "web-shopping-list.txt",
+    "sha256": "1b6e114170185ae5d94e2660746f1ef85897f630ce136aed48fa88e043e7faea",
+    "contents": "Pantry Relay shopping list\n2026-09-29\n\nLemons: 2 pieces\nLentils, cooked: 900 g\nTomatoes: 500 g\nPlain yogurt: 200 g"
+  },
+  "download_observation": "The browser download-event waiter timed out, but the new timestamped file in Downloads was independently read and matched all four visible shopping quantities.",
+  "screenshot": "10-web-cooked.png",
+  "live_alexa_session": false,
+  "contest_registered": false,
+  "contest_submitted": false,
+  "income_received_usd": 0,
+  "confirmed_unpaid_revenue_usd": 0,
+  "spending_usd": 0
+}
