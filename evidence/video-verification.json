@@ -1,0 +1,7 @@
+{
+  "decode_success": true,
+  "actual_duration": "00:02:22.90",
+  "bytes": 2770560,
+  "video_stream": "h264 (High) (avc1 / 0x31637661), yuvj420p(pc, bt470bg/unknown/unknown, progressive), 1280x720 [SAR 1:1 DAR 16:9], 29 kb/s, 12 fps, 12 tbr, 12288 tbn (default)",
+  "audio_stream": "aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 121 kb/s (default)"
+}

@@ -1,0 +1,30 @@
+{
+  "verified_at": "2026-09-29",
+  "story": "Dinner command -> local recipe planner -> pantry proposal -> explicit confirmation -> reservation -> cooked record -> persistent stock",
+  "automated_checks_passed": 9,
+  "automated_checks_failed": 0,
+  "http_check_rerun_after_download_fix_passed": true,
+  "protocol_negotiated": "2025-11-25",
+  "transport": "Streamable HTTP",
+  "official_sdk_client": true,
+  "real_mcp_tool_run": "mcp-actions-run.json",
+  "browser_flow": {
+    "recommendation": "three actual options, no stock consumed",
+    "confirmed_recipe": "Chickpea & courgette skillet",
+    "servings": 2,
+    "reservation": "100g spinach,250g courgette,300g chickpea,100g onion,80g yogurt",
+    "cooked": "reserved quantities consumed once",
+    "reload": "cooked history and updated quantities retained",
+    "shortage_plan": "8-person lemon lentil bowl",
+    "shopping_download": "actual attachment saved; 2 lemons,900g lentils,500g tomatoes,200g yogurt",
+    "blocked_shortage_cooking": true,
+    "cancellation": "reservations and this plan's shopping needs released"
+  },
+  "mobile": {"viewport_width": 390, "viewport_height": 844, "document_scroll_width": 390, "horizontal_overflow": false},
+  "skill_validation": "passed bundled quick_validate.py",
+  "paid_api_calls": 0,
+  "deposits": 0,
+  "external_submissions": 0,
+  "certified_alexa_integration": false,
+  "browser_uses_hosted_llm": false
+}

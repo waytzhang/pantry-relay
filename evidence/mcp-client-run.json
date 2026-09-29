@@ -1,0 +1,568 @@
+{
+  "transport": "Streamable HTTP",
+  "required_protocol": "2025-11-25",
+  "tool_count": 6,
+  "actions_enabled": false,
+  "events": [
+    {
+      "tool": "pantry_snapshot",
+      "input": {},
+      "result": {
+        "date": "2026-09-29",
+        "version": 3,
+        "lots": [
+          {
+            "id": "6e770ac6-5366-4ef0-864e-197861060931",
+            "ingredient": "spinach",
+            "quantity": 50,
+            "expires": "2026-09-29",
+            "reserved": 0,
+            "name": "Spinach",
+            "unit": "g",
+            "available": 50,
+            "days_left": 0,
+            "expired": false
+          },
+          {
+            "id": "dbbef9e8-6e41-4baf-806f-755308ce9039",
+            "ingredient": "tomato",
+            "quantity": 300,
+            "expires": "2026-09-30",
+            "reserved": 0,
+            "name": "Tomatoes",
+            "unit": "g",
+            "available": 300,
+            "days_left": 1,
+            "expired": false
+          },
+          {
+            "id": "d5897edb-5634-47a6-9c9d-12db6b128e63",
+            "ingredient": "courgette",
+            "quantity": 150,
+            "expires": "2026-10-01",
+            "reserved": 0,
+            "name": "Courgette",
+            "unit": "g",
+            "available": 150,
+            "days_left": 2,
+            "expired": false
+          },
+          {
+            "id": "cc8cf559-499b-4b6f-8306-f496a198aa73",
+            "ingredient": "yogurt",
+            "quantity": 120,
+            "expires": "2026-10-01",
+            "reserved": 0,
+            "name": "Plain yogurt",
+            "unit": "g",
+            "available": 120,
+            "days_left": 2,
+            "expired": false
+          },
+          {
+            "id": "40f4a820-f322-4cf8-a5b2-f6aa97c28fa1",
+            "ingredient": "lentil",
+            "quantity": 300,
+            "expires": "2026-10-02",
+            "reserved": 0,
+            "name": "Lentils, cooked",
+            "unit": "g",
+            "available": 300,
+            "days_left": 3,
+            "expired": false
+          },
+          {
+            "id": "a3b4a57a-aa33-4054-b9e1-4876fdedf684",
+            "ingredient": "feta",
+            "quantity": 100,
+            "expires": "2026-10-03",
+            "reserved": 0,
+            "name": "Feta",
+            "unit": "g",
+            "available": 100,
+            "days_left": 4,
+            "expired": false
+          },
+          {
+            "id": "f6e338f8-91c9-41c6-a009-b27ef27076aa",
+            "ingredient": "egg",
+            "quantity": 4,
+            "expires": "2026-10-04",
+            "reserved": 0,
+            "name": "Eggs",
+            "unit": "count",
+            "available": 4,
+            "days_left": 5,
+            "expired": false
+          },
+          {
+            "id": "026b0883-3409-4561-9657-f7c13ff6b4ea",
+            "ingredient": "lemon",
+            "quantity": 2,
+            "expires": "2026-10-07",
+            "reserved": 0,
+            "name": "Lemons",
+            "unit": "count",
+            "available": 2,
+            "days_left": 8,
+            "expired": false
+          },
+          {
+            "id": "4f8c57f6-c9d3-4e5c-847f-ebee7d9e61a1",
+            "ingredient": "onion",
+            "quantity": 200,
+            "expires": "2026-10-09",
+            "reserved": 0,
+            "name": "Onions",
+            "unit": "g",
+            "available": 200,
+            "days_left": 10,
+            "expired": false
+          },
+          {
+            "id": "23ec9b08-f6aa-49a1-8f0b-c8b1a2ccf324",
+            "ingredient": "chickpea",
+            "quantity": 100,
+            "expires": "2026-10-29",
+            "reserved": 0,
+            "name": "Chickpeas, drained",
+            "unit": "g",
+            "available": 100,
+            "days_left": 30,
+            "expired": false
+          },
+          {
+            "id": "57919314-4a1b-477f-b4c4-244498d33251",
+            "ingredient": "pasta",
+            "quantity": 250,
+            "expires": "2026-12-28",
+            "reserved": 0,
+            "name": "Pasta",
+            "unit": "g",
+            "available": 250,
+            "days_left": 90,
+            "expired": false
+          },
+          {
+            "id": "1ec3493f-50ca-4df7-8e5f-164ed4a5798a",
+            "ingredient": "rice",
+            "quantity": 500,
+            "expires": "2026-12-28",
+            "reserved": 0,
+            "name": "Rice",
+            "unit": "g",
+            "available": 500,
+            "days_left": 90,
+            "expired": false
+          }
+        ],
+        "plans": [
+          {
+            "id": "4a57b34c-3151-434a-9152-ff8d746f0d24",
+            "recipe": "chickpea-skillet",
+            "servings": 2,
+            "stock_version": 1,
+            "state": "cooked",
+            "detail": {
+              "recipe": {
+                "id": "chickpea-skillet",
+                "name": "Chickpea & courgette skillet",
+                "minutes": 25,
+                "vegetarian": true,
+                "ingredients": {
+                  "chickpea": 300,
+                  "courgette": 250,
+                  "spinach": 100,
+                  "onion": 100,
+                  "yogurt": 80
+                },
+                "steps": [
+                  "Soften the onion and chopped courgette in a pan.",
+                  "Add drained chickpeas and warm through, then wilt the spinach.",
+                  "Serve with yogurt."
+                ]
+              },
+              "servings": 2,
+              "needs": [
+                {
+                  "ingredient": "chickpea",
+                  "name": "Chickpeas, drained",
+                  "unit": "g",
+                  "quantity": 300
+                },
+                {
+                  "ingredient": "courgette",
+                  "name": "Courgette",
+                  "unit": "g",
+                  "quantity": 250
+                },
+                {
+                  "ingredient": "spinach",
+                  "name": "Spinach",
+                  "unit": "g",
+                  "quantity": 100
+                },
+                {
+                  "ingredient": "onion",
+                  "name": "Onions",
+                  "unit": "g",
+                  "quantity": 100
+                },
+                {
+                  "ingredient": "yogurt",
+                  "name": "Plain yogurt",
+                  "unit": "g",
+                  "quantity": 80
+                }
+              ],
+              "take": [
+                {
+                  "lot_id": "23ec9b08-f6aa-49a1-8f0b-c8b1a2ccf324",
+                  "ingredient": "chickpea",
+                  "quantity": 300,
+                  "days_left": 30
+                },
+                {
+                  "lot_id": "d5897edb-5634-47a6-9c9d-12db6b128e63",
+                  "ingredient": "courgette",
+                  "quantity": 250,
+                  "days_left": 2
+                },
+                {
+                  "lot_id": "6e770ac6-5366-4ef0-864e-197861060931",
+                  "ingredient": "spinach",
+                  "quantity": 100,
+                  "days_left": 0
+                },
+                {
+                  "lot_id": "4f8c57f6-c9d3-4e5c-847f-ebee7d9e61a1",
+                  "ingredient": "onion",
+                  "quantity": 100,
+                  "days_left": 10
+                },
+                {
+                  "lot_id": "cc8cf559-499b-4b6f-8306-f496a198aa73",
+                  "ingredient": "yogurt",
+                  "quantity": 80,
+                  "days_left": 2
+                }
+              ],
+              "missing": [],
+              "score": 130,
+              "covered_ingredients": 5,
+              "soon_items": [
+                "Courgette",
+                "Spinach",
+                "Plain yogurt"
+              ],
+              "stock_version": 1,
+              "id": "4a57b34c-3151-434a-9152-ff8d746f0d24"
+            },
+            "created": "2026-09-29T03:58:14.498Z"
+          }
+        ],
+        "shopping": [],
+        "events": [
+          {
+            "id": 3,
+            "kind": "meal_cooked",
+            "detail": {
+              "plan_id": "4a57b34c-3151-434a-9152-ff8d746f0d24",
+              "name": "Chickpea & courgette skillet"
+            },
+            "created": "2026-09-29T03:58:47.725Z"
+          },
+          {
+            "id": 2,
+            "kind": "meal_reserved",
+            "detail": {
+              "plan_id": "4a57b34c-3151-434a-9152-ff8d746f0d24",
+              "name": "Chickpea & courgette skillet"
+            },
+            "created": "2026-09-29T03:58:38.037Z"
+          },
+          {
+            "id": 1,
+            "kind": "demo_seed",
+            "detail": {
+              "fictional": true
+            },
+            "created": "2026-09-29T03:57:48.362Z"
+          }
+        ]
+      }
+    },
+    {
+      "tool": "recommend_dinner",
+      "input": {
+        "servings": 2,
+        "minutes": 25,
+        "vegetarian": true
+      },
+      "result": {
+        "version": 3,
+        "options": [
+          {
+            "recipe": {
+              "id": "lentil-bowl",
+              "name": "Lemon lentil bowl",
+              "minutes": 15,
+              "vegetarian": true,
+              "ingredients": {
+                "lentil": 300,
+                "tomato": 200,
+                "yogurt": 80,
+                "lemon": 1
+              },
+              "steps": [
+                "Warm the cooked lentils following their storage instructions.",
+                "Chop the tomatoes and stir into the lentils.",
+                "Finish with yogurt and lemon to taste."
+              ]
+            },
+            "servings": 2,
+            "needs": [
+              {
+                "ingredient": "lentil",
+                "name": "Lentils, cooked",
+                "unit": "g",
+                "quantity": 300
+              },
+              {
+                "ingredient": "tomato",
+                "name": "Tomatoes",
+                "unit": "g",
+                "quantity": 200
+              },
+              {
+                "ingredient": "yogurt",
+                "name": "Plain yogurt",
+                "unit": "g",
+                "quantity": 80
+              },
+              {
+                "ingredient": "lemon",
+                "name": "Lemons",
+                "unit": "count",
+                "quantity": 1
+              }
+            ],
+            "take": [
+              {
+                "lot_id": "40f4a820-f322-4cf8-a5b2-f6aa97c28fa1",
+                "ingredient": "lentil",
+                "quantity": 300,
+                "days_left": 3
+              },
+              {
+                "lot_id": "dbbef9e8-6e41-4baf-806f-755308ce9039",
+                "ingredient": "tomato",
+                "quantity": 200,
+                "days_left": 1
+              },
+              {
+                "lot_id": "cc8cf559-499b-4b6f-8306-f496a198aa73",
+                "ingredient": "yogurt",
+                "quantity": 80,
+                "days_left": 2
+              },
+              {
+                "lot_id": "026b0883-3409-4561-9657-f7c13ff6b4ea",
+                "ingredient": "lemon",
+                "quantity": 1,
+                "days_left": 8
+              }
+            ],
+            "missing": [],
+            "score": 120,
+            "covered_ingredients": 4,
+            "soon_items": [
+              "Tomatoes",
+              "Plain yogurt"
+            ],
+            "stock_version": 3,
+            "id": "405a086f-76d2-40fd-b6c7-bfed5618c4d5"
+          },
+          {
+            "recipe": {
+              "id": "garden-omelette",
+              "name": "Garden omelette",
+              "minutes": 15,
+              "vegetarian": true,
+              "ingredients": {
+                "egg": 4,
+                "spinach": 100,
+                "tomato": 150,
+                "feta": 40
+              },
+              "steps": [
+                "Soften the chopped tomatoes, then wilt the spinach.",
+                "Beat the eggs and pour into the pan.",
+                "Add feta and cook until the eggs are fully set."
+              ]
+            },
+            "servings": 2,
+            "needs": [
+              {
+                "ingredient": "egg",
+                "name": "Eggs",
+                "unit": "count",
+                "quantity": 4
+              },
+              {
+                "ingredient": "spinach",
+                "name": "Spinach",
+                "unit": "g",
+                "quantity": 100
+              },
+              {
+                "ingredient": "tomato",
+                "name": "Tomatoes",
+                "unit": "g",
+                "quantity": 150
+              },
+              {
+                "ingredient": "feta",
+                "name": "Feta",
+                "unit": "g",
+                "quantity": 40
+              }
+            ],
+            "take": [
+              {
+                "lot_id": "f6e338f8-91c9-41c6-a009-b27ef27076aa",
+                "ingredient": "egg",
+                "quantity": 4,
+                "days_left": 5
+              },
+              {
+                "lot_id": "6e770ac6-5366-4ef0-864e-197861060931",
+                "ingredient": "spinach",
+                "quantity": 50,
+                "days_left": 0
+              },
+              {
+                "lot_id": "dbbef9e8-6e41-4baf-806f-755308ce9039",
+                "ingredient": "tomato",
+                "quantity": 150,
+                "days_left": 1
+              },
+              {
+                "lot_id": "a3b4a57a-aa33-4054-b9e1-4876fdedf684",
+                "ingredient": "feta",
+                "quantity": 40,
+                "days_left": 4
+              }
+            ],
+            "missing": [
+              {
+                "ingredient": "spinach",
+                "name": "Spinach",
+                "unit": "g",
+                "quantity": 50
+              }
+            ],
+            "score": 94.5,
+            "covered_ingredients": 3,
+            "soon_items": [
+              "Spinach",
+              "Tomatoes"
+            ],
+            "stock_version": 3,
+            "id": "207b93de-7db5-4848-b83c-89edd0cba98b"
+          },
+          {
+            "recipe": {
+              "id": "green-pasta",
+              "name": "Green garden pasta",
+              "minutes": 20,
+              "vegetarian": true,
+              "ingredients": {
+                "pasta": 180,
+                "spinach": 120,
+                "tomato": 180,
+                "feta": 60
+              },
+              "steps": [
+                "Cook the pasta following its packet instructions.",
+                "Cook the tomatoes in a pan until softened, then wilt the spinach.",
+                "Toss with pasta and crumbled feta."
+              ]
+            },
+            "servings": 2,
+            "needs": [
+              {
+                "ingredient": "pasta",
+                "name": "Pasta",
+                "unit": "g",
+                "quantity": 180
+              },
+              {
+                "ingredient": "spinach",
+                "name": "Spinach",
+                "unit": "g",
+                "quantity": 120
+              },
+              {
+                "ingredient": "tomato",
+                "name": "Tomatoes",
+                "unit": "g",
+                "quantity": 180
+              },
+              {
+                "ingredient": "feta",
+                "name": "Feta",
+                "unit": "g",
+                "quantity": 60
+              }
+            ],
+            "take": [
+              {
+                "lot_id": "57919314-4a1b-477f-b4c4-244498d33251",
+                "ingredient": "pasta",
+                "quantity": 180,
+                "days_left": 90
+              },
+              {
+                "lot_id": "6e770ac6-5366-4ef0-864e-197861060931",
+                "ingredient": "spinach",
+                "quantity": 50,
+                "days_left": 0
+              },
+              {
+                "lot_id": "dbbef9e8-6e41-4baf-806f-755308ce9039",
+                "ingredient": "tomato",
+                "quantity": 180,
+                "days_left": 1
+              },
+              {
+                "lot_id": "a3b4a57a-aa33-4054-b9e1-4876fdedf684",
+                "ingredient": "feta",
+                "quantity": 60,
+                "days_left": 4
+              }
+            ],
+            "missing": [
+              {
+                "ingredient": "spinach",
+                "name": "Spinach",
+                "unit": "g",
+                "quantity": 70
+              }
+            ],
+            "score": 91.58333333333334,
+            "covered_ingredients": 3,
+            "soon_items": [
+              "Spinach",
+              "Tomatoes"
+            ],
+            "stock_version": 3,
+            "id": "cff63bbe-b3e1-438b-b185-8c8e4a5071b8"
+          }
+        ],
+        "excluded_expired_lots": 0,
+        "message": "Choose a meal to reserve ingredients. Stock is unchanged until you mark it cooked."
+      }
+    }
+  ]
+}
