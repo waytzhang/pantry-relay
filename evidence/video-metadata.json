@@ -1,9 +1,11 @@
 {
-  "duration_seconds": 142.76,
+  "duration_seconds": 143,
   "under_three_minutes": true,
-  "format": "1280x720 H.264/AAC",
-  "provenance": "Narrated montage of actual browser captures; no live Alexa session is claimed.",
-  "voice": "Installed macOS Samantha text-to-speech",
+  "format": "1280x816 H.264, no audio",
+  "provenance": "Captioned montage of actual browser captures; no live Alexa session is claimed.",
+  "voice": null,
+  "audio_tracks": 0,
+  "system_voice_used": false,
   "public_upload": false,
   "source_captures": [
     "01-pantry.png",
@@ -16,15 +18,78 @@
     "09-mcp-proof.png",
     "01-pantry.png"
   ],
-  "narration": [
-    "Pantry Relay helps a household hand dinner from one person to another. This review uses real browser screen captures from a running local prototype, with fictional pantry data. It is not a live Alexa session. Start with the food already in the kitchen.",
-    "The request is dinner for two, vegetarian, within twenty five minutes. The planner checks available quantities and date labels. It suggests the chickpea and courgette skillet, plus other options. At this point, no stock has been consumed or reserved.",
-    "Confirming dinner reserves the ingredients and creates a kitchen handoff. Available stock now excludes those reservations. Another household member cannot silently promise the same ingredients twice. The meal is planned, but it has not been recorded as cooked.",
-    "Only the Meal cooked action consumes the reserved food. Repeated requests are handled once, and a refresh keeps the meal history and updated quantities. That distinction makes a shared pantry useful across more than one conversation.",
-    "Now the household requests dinner for eight. The same planner scales the recipe and identifies shortages. Missing ingredients are shown before confirmation. It never assumes food is already present just because a recipe needs it.",
-    "The confirmed plan puts two lemons, nine hundred grams of lentils, five hundred grams of tomatoes and two hundred grams of yogurt on the shopping list. The list was actually downloaded. Cooking a plan with shortages is blocked until it is cancelled, restocked and replanned.",
-    "Cancelling that dinner releases its reservations and shopping needs without consuming food. Previously cooked meals remain in history. A stock change also invalidates older proposals, so the assistant must recommend again instead of acting on stale quantities.",
-    "The official MCP SDK client also ran this workflow through real Streamable HTTP calls. Here is the saved execution evidence, including reading stock, recommending, confirming and recording a cooked meal. Protocol twenty twenty five, November twenty fifth, was verified in the integration test.",
-    "Pantry Relay runs locally without a paid API, cloud account, hardware purchase or wallet. The browser command demo is deterministic; a compatible agent can use the separate MCP service and reusable skill. This is an AI assisted contest candidate, with no prize or submission claimed."
+  "scenes": [
+    {
+      "capture": "01-pantry.png",
+      "duration_seconds": 15,
+      "captions": [
+        "Pantry Relay: a shared pantry and local MCP tools.",
+        "Fictional household data. Actual captures of the running app."
+      ]
+    },
+    {
+      "capture": "02-options.png",
+      "duration_seconds": 15,
+      "captions": [
+        "Dinner for two, vegetarian, under 25 minutes.",
+        "Choosing an option does not consume or reserve ingredients."
+      ]
+    },
+    {
+      "capture": "03-reserved.png",
+      "duration_seconds": 15,
+      "captions": [
+        "Confirm dinner to reserve the ingredients for that meal.",
+        "The meal is planned; cooking has not been recorded."
+      ]
+    },
+    {
+      "capture": "04-cooked.png",
+      "duration_seconds": 14,
+      "captions": [
+        "Mark the meal cooked to update the pantry.",
+        "A repeated cooking request does not deduct food again."
+      ]
+    },
+    {
+      "capture": "05-shortages.png",
+      "duration_seconds": 14,
+      "captions": [
+        "Dinner for eight exposes the shortages.",
+        "Missing food is shown before confirmation."
+      ]
+    },
+    {
+      "capture": "07-shopping.png",
+      "duration_seconds": 16,
+      "captions": [
+        "The shopping list contains only what is missing.",
+        "The list was downloaded. Missing stock cannot be silently consumed."
+      ]
+    },
+    {
+      "capture": "08-cancelled.png",
+      "duration_seconds": 16,
+      "captions": [
+        "Cancel dinner to release its reservations and shopping needs.",
+        "Previously cooked meals remain in history."
+      ]
+    },
+    {
+      "capture": "09-mcp-proof.png",
+      "duration_seconds": 19,
+      "captions": [
+        "The official MCP SDK client ran the workflow over Streamable HTTP.",
+        "Read stock, recommend, confirm and record cooking. Protocol 2025-11-25."
+      ]
+    },
+    {
+      "capture": "01-pantry.png",
+      "duration_seconds": 19,
+      "captions": [
+        "Runs locally without a paid API or cloud account.",
+        "Deterministic browser demo; live Alexa+ device access has not been tested."
+      ]
+    }
   ]
 }
