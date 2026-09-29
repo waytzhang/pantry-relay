@@ -1,43 +1,53 @@
-# Pantry Relay: dinner planning that remembers what actually happened
+# Pantry Relay
 
-**Local draft for owner review. No external submission or contest registration has occurred.**
+## Tagline
+
+Plan dinner from the pantry. Reserve it when chosen. Update stock when cooked.
 
 ## Inspiration
 
-One person decides dinner; someone else cooks it. A shopping list grows, but the pantry does not know what was used. Pantry Relay keeps those actions separate and remembers the handoff, so an assistant can coordinate a meal without quietly inventing stock or double-counting ingredients.
+Choosing dinner and cooking dinner are two different events. A shared pantry needs to remember both. Otherwise, two people can plan meals around the same ingredients, or a suggested recipe can look like food that has already been used.
+
+Pantry Relay keeps that handoff visible: suggest a meal, confirm it, then record that it was cooked.
 
 ## What it does
 
-Pantry Relay reads a shared pantry, ranks original vegetarian recipes by available ingredients and near-date stock, and presents dinner options within a serving count and time limit. A chosen meal reserves stock only after confirmation. Cooking deducts that stock exactly once. Cancellation releases the plan and its shopping needs. Pantry state and meal history survive restarts.
+Ask for dinner for two in under 30 minutes. Pantry Relay checks the cupboard, scales five vegetarian recipes, and ranks the options by ingredient coverage and stock approaching its recorded date.
 
-Conflicting requests are handled explicitly: another change to stock makes a proposal stale and requires a new recommendation. Shortages appear on the shopping list but never become inventory until food is actually recorded as received.
+Browsing options leaves the pantry alone. Confirming a meal reserves its ingredients and adds any shortages to the shopping list. Marking the meal cooked deducts the reserved stock once, even if the request is repeated. Cancelling releases that meal's reservations and shopping needs.
 
-## How we built it
+If someone changes the stock after a recommendation, the old proposal is blocked and must be refreshed. Items on the shopping list become inventory only when they are recorded as received. Plans and stock survive an app restart.
 
-Node.js, SQLite, Express, the official MCP TypeScript SDK, Zod, Bootstrap and native browser code. The self-hosted MCP endpoint uses protocol 2025-11-25 over Streamable HTTP. Six tools, one pantry resource and one reusable prompt support a multi-step agent workflow. A reusable SKILL.md documents confirmation and recovery behavior.
+## How it was built
 
-All design, code and written materials were produced with Codex assistance for the owner's review. Demo recipes are original examples. Seeded household records are fictional.
+The app uses Node.js, SQLite, Express, Zod and the official MCP TypeScript SDK. The browser and the MCP tools share the same pantry operations. The self-hosted endpoint supports Streamable HTTP with protocol 2025-11-25, six tools, a pantry resource and a dinner-planning prompt. A bundled skill explains when an agent should ask for confirmation and how to recover from a stale proposal.
 
-## What the demo proves
+The browser demo uses a deterministic command parser. The MCP path was tested with the official SDK client; a live Alexa+ device session has not been tested. Everything runs locally without a paid model endpoint or cloud account.
 
-The browser interface and MCP tools share the same persistent pantry logic. Automated checks exercise real SDK client-to-server calls and protocol negotiation. The browser flow demonstrates proposal, confirmation, reservation, cooking and persistence.
+Codex assisted with the design, code, testing and written materials. The recipes are original demo examples and the household records are fictional.
 
-The browser text box uses a deterministic parser and planner, not a paid language-model service. This submission candidate is a working self-hosted MCP integration; it is not presented as a live Alexa+ account session or a certified Alexa skill.
+## Challenges
 
-## Challenges and lessons
+The difficult part was keeping three quantities straight: what is in the pantry, what another meal has reserved, and what is still missing. A retry must not use food twice. Cancelling one meal must not erase another meal's shopping needs. Checking these transitions made the handoff reliable.
 
-An assistant can propose a meal without implying it has been cooked. We built explicit state transitions and idempotent retries because dinner planning spans several people and several moments. Date-label changes and restocking also invalidate assumptions. These details matter more than another recipe chatbot.
+## Accomplishments
+
+The complete propose-confirm-cook flow works through both the browser and MCP. Nine automated checks cover repeated cooking requests, stale proposals, shortages, cancellation, restarts and real HTTP protocol negotiation. The 2 minute 23 second review video uses captures of the running app and its recorded MCP calls.
+
+## What was learned
+
+A tool's description is not proof that the user approved a change. Confirmation needs to be represented in the application, and the agent needs clear instructions about which actions require it.
 
 ## What's next
 
-Test the MCP workflow with a user-selected agent client, extend recipes and ingredient units, and add authenticated multi-household hosting only after a deployment budget and privacy requirements are agreed.
+Test the same workflow in an Alexa+ client, add more recipes and units, and try it with more than one household member before adding remote hosting.
 
-## Submission fields still requiring owner action
+## Entry details (not part of the public story)
 
-- Legal entrant, real residence, adult eligibility and contest rules acceptance.
-- GitHub repository URL under the owner's account, with the included MIT license.
-- Public YouTube or Vimeo demo URL, under three minutes.
-- Primary track: Alexa+. Optional Open Source mini-challenge only after a separate qualifying public contribution is verified.
+- Source: https://github.com/waytzhang/pantry-relay (currently private).
+- Built with: JavaScript, Node.js, SQLite, Express, MCP, Zod, Bootstrap, HTML, CSS.
+- Intended primary track: Alexa+.
+- No AWS or optional Open Source prize claim is included.
 - Product feedback: see FEEDBACK.md.
-
-No AWS mini-challenge is claimed: no AWS service was used. No prize, revenue, user adoption, customer endorsement or Alexa certification is claimed.
+- Video: evidence/pantry-relay-review.mp4; a public YouTube or Vimeo URL is still needed.
+- Devpost is logged in as dingbuzhang. Project creation is waiting at a CAPTCHA; contest registration is waiting for the entrant's eligibility and rules acceptance. No contest entry has been submitted.

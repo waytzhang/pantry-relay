@@ -1,13 +1,21 @@
-# Developer feedback from actual implementation
+# Product feedback
 
-Tools used: official MCP TypeScript SDK 1.31.0, Streamable HTTP transport, Node.js SQLite, Express and Zod. No Fire TV, Ring, Bee or AWS runtime was used, so this report does not claim experience with those tools.
+## What was used
 
-What worked: the SDK provided real server and client implementations. Stateless JSON responses let a local client invoke the workflow without managing long-lived sessions. Typed tool arguments caught invalid confirmation inputs before changing pantry state. Negotiation to 2025-11-25 passed in the HTTP integration test.
+The official MCP TypeScript SDK 1.31.0, its Streamable HTTP server and client, Express, Zod and Node.js SQLite. The endpoint negotiated protocol 2025-11-25 in a real HTTP test. This feedback comes from building the local MCP integration; there has been no live Alexa+ device test.
 
-Onboarding: installed the official npm package, adapted its stateless HTTP server pattern, registered the pantry tools, connected the official client, and checked the complete workflow. No cloud credentials or paid inference endpoint were required.
+## What worked
 
-Friction: tool annotations alone cannot establish that a user actually confirmed a meal. The application must represent confirmation in its workflow and the agent guidance must preserve the user's intent. Multi-turn writes also need stale-state handling: a draft can be out of date by the time the user chooses it.
+The SDK's stateless HTTP pattern was enough to get a local client connected. Registering typed tools made it straightforward to share the pantry operations with an agent. The same client could read stock, request a recommendation, confirm it and record cooking without cloud credentials or a paid model service.
 
-Would build with MCP again: yes, for portable agent access to structured household workflows. A future Alexa deployment would still need actual platform validation. We have not tested production Alexa+ access, so there is no claimed defect in Alexa SDKs or services.
+## Where care was needed
 
-Feature request: provide a public Alexa+ local test client that displays tool calls, confirmation transitions and reconnect behavior. This would help a builder distinguish MCP compatibility from the final device experience.
+Tool annotations do not tell the server whether a person really agreed to reserve food. The workflow needs an explicit confirmation step, backed by agent instructions. A recommendation can also become stale before it is chosen, so the server checks the stock version before accepting it. These were application design issues, rather than observed failures in an Amazon service.
+
+## What would help
+
+A publicly available Alexa+ test client that shows the incoming tool call, its arguments, the response and the next conversational step would make this easier to validate. A small reference example covering confirmation, retries and stale state would be especially useful for tools that change shared data.
+
+## Would use it again?
+
+Yes. MCP gives this pantry workflow an interface that can be tested separately from the device. The next step is validating those same operations in an Alexa+ client. Fire TV, Ring, Bee and AWS were not used for this project.
