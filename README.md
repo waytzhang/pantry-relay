@@ -8,6 +8,8 @@ A local household dinner handoff: plan from available food, reserve a chosen mea
 
 [Download the browser release and offline preview](https://github.com/waytzhang/pantry-relay/releases/tag/v0.1.0-web). The standalone offline file is a preview; direct file opening has not been browser-verified. The hosted sample above is the tested version.
 
+If you try the sample kitchen, [share a bug or missing-use-case note on GitHub](https://github.com/waytzhang/pantry-relay/issues/new). Posting requires a GitHub account. No household data is collected by the demo for feedback.
+
 The public site demonstrates the pantry workflow. The real MCP endpoint runs separately in the local application below; the website does not provide a live Alexa session. To rebuild the static files from source, run `npm run build:web` after installing dependencies. GitHub Pages serves `docs/`.
 
 ## Run locally, with no recharge
