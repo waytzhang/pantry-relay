@@ -12,6 +12,7 @@ for (const file of ['app.js', 'app.css', 'bootstrap.min.css', 'bootstrap-LICENSE
   writeFileSync(resolve(target, file), content);
 }
 for (const file of ['pantry-core.js', 'browser-database.js', 'browser-session.js']) copyFileSync(resolve(root, 'src', file), resolve(target, file));
+copyFileSync(resolve(root, 'public/pantry-relay-share.jpg'), resolve(target, 'pantry-relay-share.jpg'));
 copyFileSync(resolve(root, 'scripts/browser-data-source.js'), resolve(target, 'data-source.js'));
 for (const file of ['sql-wasm.js', 'sql-wasm.wasm']) copyFileSync(resolve(root, 'node_modules/sql.js/dist', file), resolve(target, 'vendor', file));
 copyFileSync(resolve(root, 'node_modules/sql.js/LICENSE'), resolve(target, 'vendor/sql-js-LICENSE.txt'));
