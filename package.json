@@ -10,7 +10,9 @@
     "start": "node src/server.js",
     "test": "node --test test/*.test.js",
     "demo": "node scripts/demo-client.js",
-    "build:web": "node scripts/build-web-demo.js"
+    "build:web": "node scripts/build-web-demo.js",
+    "build:mcpb": "node scripts/build-mcpb.js",
+    "verify:mcpb": "node scripts/verify-mcpb.js"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "1.31.0",

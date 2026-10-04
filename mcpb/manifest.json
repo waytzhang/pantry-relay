@@ -1,0 +1,32 @@
+{
+  "manifest_version": "0.3",
+  "name": "pantry-relay",
+  "display_name": "Pantry Relay",
+  "version": "0.1.0",
+  "description": "Plan dinner from a local SQLite pantry through six MCP tools.",
+  "author": {
+    "name": "waytzhang",
+    "url": "https://github.com/waytzhang"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/waytzhang/pantry-relay.git"
+  },
+  "homepage": "https://waytzhang.github.io/pantry-relay/",
+  "documentation": "https://github.com/waytzhang/pantry-relay/blob/main/README-MCPB.md",
+  "support": "https://github.com/waytzhang/pantry-relay/issues",
+  "license": "MIT",
+  "keywords": ["meal planning", "pantry", "local-first", "sqlite"],
+  "server": {
+    "type": "node",
+    "entry_point": "src/stdio.js",
+    "mcp_config": {
+      "command": "node",
+      "args": ["${__dirname}/src/stdio.js"]
+    }
+  },
+  "compatibility": {
+    "platforms": ["darwin", "win32", "linux"],
+    "runtimes": { "node": ">=24.0.0" }
+  }
+}

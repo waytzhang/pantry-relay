@@ -12,6 +12,10 @@ If you try the sample kitchen, [share a bug or missing-use-case note on GitHub](
 
 The public site demonstrates the pantry workflow. The real MCP endpoint runs separately in the local application below; the website does not provide a live Alexa session. To rebuild the static files from source, run `npm run build:web` after installing dependencies. GitHub Pages serves `docs/`.
 
+## Install as a local MCP bundle
+
+[Download the MCP bundle](https://github.com/waytzhang/pantry-relay/releases/tag/v0.1.0-mcpb) for a client that supports `.mcpb` files and Node.js 24 or newer. It runs the same six tools over stdio and stores its own SQLite database in your home directory, separately from the browser sample. The [bundle guide](README-MCPB.md) describes the location and limits. It includes the runtime dependencies, but no household data or account credentials.
+
 ## Run locally, with no recharge
 
 Prerequisite: Node.js 24 or newer. No paid cloud account, API key, wallet, hardware, or subscription is required for this application.
@@ -52,7 +56,7 @@ The SDK client makes actual HTTP MCP calls. The report lists tool inputs and out
 npm test
 ```
 
-Twelve checks cover unchanged stock during proposals, exact-once cooking, stale proposals from overlapping users, cancellation, shortages, expiry changes, valid restocking, restart persistence, and the official MCP client over real HTTP. The integration test explicitly verifies protocol negotiation returns `2025-11-25`. Browser-adapter checks use actual WebAssembly SQLite to verify persisted state, competing tabs, and failed storage writes without partial reservations.
+Thirteen checks cover unchanged stock during proposals, exact-once cooking, stale proposals from overlapping users, cancellation, shortages, expiry changes, valid restocking, and official MCP clients over real HTTP and stdio. The HTTP integration test explicitly verifies protocol negotiation returns `2025-11-25`. Browser-adapter checks use actual WebAssembly SQLite to verify persisted state, competing tabs, and failed storage writes without partial reservations. `npm run build:mcpb` creates the installable archive; `npm run verify:mcpb` checks the unpacked bundle with a real MCP client.
 
 Browser evidence is in `evidence/`. The recorded flow confirms a two-person skillet, records it cooked, reloads the app, and verifies the retained inventory. See [verification record](evidence/verification.json).
 
@@ -68,4 +72,4 @@ One household, one local computer; no user accounts or external transactions. Or
 - [Developer feedback](docs/FEEDBACK.md)
 - [Opportunity check](evidence/amazon-alexa-opportunity.json)
 
-Source code is offered under MIT; Bootstrap retains its own MIT notice in `public/bootstrap-LICENSE.txt`. Dependency licenses stay with their npm packages. No credentials, household database, or `node_modules` are included in the release archive.
+Source code is offered under MIT; Bootstrap retains its own MIT notice in `public/bootstrap-LICENSE.txt`. Dependency licenses stay with their npm packages. The source review archive excludes credentials, household data and dependencies. The installable MCP bundle includes only the server files and their runtime dependencies, with no credentials or household database.
